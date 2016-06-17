@@ -35,30 +35,26 @@
 }
 
 - (IBAction)threeOfSpadesButton:(UIButton *)sender {
-    self.topLabel.text = self.threeOfSpades.cardLabel;
-    self.middleLabel.text = self.threeOfSpades.cardLabel;
-    self.bottomLabel.text = self.threeOfSpades.cardLabel;
+    [self updateLabels:self.threeOfSpades];
 }
 
 - (IBAction)fourOfClubsButton:(UIButton *)sender {
-    self.topLabel.text = self.fourOfClubs.cardLabel;
-    self.middleLabel.text = self.fourOfClubs.cardLabel;
-    self.bottomLabel.text = self.fourOfClubs.cardLabel;
-
+    [self updateLabels:self.fourOfClubs];
 }
 
 - (IBAction)eightOfDiamondsButton:(UIButton *)sender {
-    self.topLabel.text = self.eightOfDiamonds.cardLabel;
-    self.middleLabel.text = self.eightOfDiamonds.cardLabel;
-    self.bottomLabel.text = self.eightOfDiamonds.cardLabel;
-  
+    [self updateLabels:self.eightOfDiamonds];
 }
 
 - (IBAction)tenOfHeartsButton:(UIButton *)sender {
-    self.topLabel.text = self.tenOfHearts.cardLabel;
-    self.middleLabel.text = self.tenOfHearts.cardLabel;
-    self.bottomLabel.text = self.tenOfHearts.cardLabel;
+    [self updateLabels:self.tenOfHearts];
 }
 
+
+- (void)updateLabels:(FISCard *)card {
+    self.topLabel.text = card.cardLabel;
+    self.middleLabel.text = card.cardLabel;
+    self.bottomLabel.text = card.cardLabel;
+}
 
 @end
